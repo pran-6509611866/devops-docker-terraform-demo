@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY app/package*.json ./
 
 # ติดตั้ง dependencies
-RUN npm install
+RUN npm cache clean --force && npm install
 
 # คัดลอก source code ที่เหลือ
 COPY app/ .
